@@ -40,8 +40,10 @@ module.exports =
     #used by ndx-sync
   exec: (sql, props, notCritical) ->
     #execute arbitrary sql
-  select: (table, whereObj) ->
+  select: (table, whereObj, page, pageSize, sort, sortDir) ->
     #return an array of selected objects
+  count: (table, whereObj) ->
+    #returns the number of selected objects
   update: (table, obj, whereObj) ->
     #update an object
   insert: (table, obj) ->
